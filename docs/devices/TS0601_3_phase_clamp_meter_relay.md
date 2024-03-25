@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | 3-phase clamp power meter with relay |
 | Exposes | switch (state), power, energy, produced_energy, voltage_a, voltage_b, voltage_c, power_a, power_b, power_c, current_a, current_b, current_c, linkquality |
-| Picture | ![TuYa TS0601_3_phase_clamp_meter_relay](https://www.zigbee2mqtt.io/images/devices/TS0601_3_phase_clamp_meter_relay.jpg) |
+| Picture | ![TuYa TS0601_3_phase_clamp_meter_relay](https://www.zigbee2mqtt.io/images/devices/TS0601_3_phase_clamp_meter_relay.png) |
 | White-label | Wenzhou Taiye Electric TAC7361C BI |
 
 
@@ -33,13 +33,13 @@ pageClass: device-page
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
-* `energy_precision`: Number of digits after decimal point for energy, takes into effect on next report of device. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+* `power_calibration`: Calibrates the power value (percentual offset), takes into effect on next report of device. The value must be a number.
+
+* `power_precision`: Number of digits after decimal point for power, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
 
 * `energy_calibration`: Calibrates the energy value (percentual offset), takes into effect on next report of device. The value must be a number.
 
-* `power_precision`: Number of digits after decimal point for power, takes into effect on next report of device. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
-
-* `power_calibration`: Calibrates the power value (percentual offset), takes into effect on next report of device. The value must be a number.
+* `energy_precision`: Number of digits after decimal point for energy, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
 
 
 ## Exposes
@@ -61,61 +61,61 @@ Value can be found in the published state on the `energy` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `kWh`.
 
-### Produced_energy (numeric)
+### Produced energy (numeric)
 Sum of produced energy.
 Value can be found in the published state on the `produced_energy` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `kWh`.
 
-### Voltage_a (numeric)
+### Voltage a (numeric)
 Measured electrical potential value (phase A).
 Value can be found in the published state on the `voltage_a` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `V`.
 
-### Voltage_b (numeric)
+### Voltage b (numeric)
 Measured electrical potential value (phase B).
 Value can be found in the published state on the `voltage_b` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `V`.
 
-### Voltage_c (numeric)
+### Voltage c (numeric)
 Measured electrical potential value (phase C).
 Value can be found in the published state on the `voltage_c` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `V`.
 
-### Power_a (numeric)
+### Power a (numeric)
 Instantaneous measured power (phase A).
 Value can be found in the published state on the `power_a` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `W`.
 
-### Power_b (numeric)
+### Power b (numeric)
 Instantaneous measured power (phase B).
 Value can be found in the published state on the `power_b` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `W`.
 
-### Power_c (numeric)
+### Power c (numeric)
 Instantaneous measured power (phase C).
 Value can be found in the published state on the `power_c` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `W`.
 
-### Current_a (numeric)
+### Current a (numeric)
 Instantaneous measured electrical current (phase A).
 Value can be found in the published state on the `current_a` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `A`.
 
-### Current_b (numeric)
+### Current b (numeric)
 Instantaneous measured electrical current (phase B).
 Value can be found in the published state on the `current_b` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `A`.
 
-### Current_c (numeric)
+### Current c (numeric)
 Instantaneous measured electrical current (phase C).
 Value can be found in the published state on the `current_c` property.
 It's not possible to read (`/get`) or write (`/set`) this value.

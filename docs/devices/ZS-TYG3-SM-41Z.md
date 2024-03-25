@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | 4 gang smart switch with backlight and neutral wire |
 | Exposes | switch (state), backlight_mode, countdown, power_on_behavior, linkquality |
-| Picture | ![TuYa ZS-TYG3-SM-41Z](https://www.zigbee2mqtt.io/images/devices/ZS-TYG3-SM-41Z.jpg) |
+| Picture | ![TuYa ZS-TYG3-SM-41Z](https://www.zigbee2mqtt.io/images/devices/ZS-TYG3-SM-41Z.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -57,12 +57,12 @@ The current state of this switch is in the published state under the `state_l4` 
 To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state_l4": "ON"}`, `{"state_l4": "OFF"}` or `{"state_l4": "TOGGLE"}`.
 It's not possible to read (`/get`) this value.
 
-### Backlight_mode (binary)
+### Backlight mode (binary)
 Mode of the backlight.
 Value can be found in the published state on the `backlight_mode` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"backlight_mode": NEW_VALUE}`.
-If value equals `ON` backlight_mode is ON, if `OFF` OFF.
+If value equals `ON` backlight mode is ON, if `OFF` OFF.
 
 ### Countdown (numeric, l1 endpoint)
 Countdown to turn device off after a certain time.
@@ -96,8 +96,8 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `0` and the maximum value is `43200`.
 The unit of this value is `s`.
 
-### Power_on_behavior (enum)
-Controls the behavior when the device is powered on after power loss.
+### Power-on behavior (enum)
+Controls the behavior when the device is powered on after power loss. If you get an `UNSUPPORTED_ATTRIBUTE` error, the device does not support it..
 Value can be found in the published state on the `power_on_behavior` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": NEW_VALUE}`.

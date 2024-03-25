@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | Smart siren |
 | Exposes | alarm, type, volume, ringtone, power_type, duration, battery_level, battery, linkquality |
-| Picture | ![TuYa YXZBSL](https://www.zigbee2mqtt.io/images/devices/YXZBSL.jpg) |
+| Picture | ![TuYa YXZBSL](https://www.zigbee2mqtt.io/images/devices/YXZBSL.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -51,7 +51,7 @@ Volume of the alarm.
 Value can be found in the published state on the `volume` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"volume": NEW_VALUE}`.
-The possible values are: `mute`, `low`, `medium`, `high`.
+The possible values are: `mute`, `low`, `middle`, `high`.
 
 ### Ringtone (enum)
 Ringtone of the alarm.
@@ -60,7 +60,7 @@ It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"ringtone": NEW_VALUE}`.
 The possible values are: `melody1`, `melody2`, `melody3`, `melody4`, `melody5`, `melody6`, `melody7`, `melody8`, `door`, `water`, `temperature`, `entered`, `left`.
 
-### Power_type (enum)
+### Power type (enum)
 Power type.
 Value can be found in the published state on the `power_type` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
@@ -74,14 +74,14 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `1` and the maximum value is `60`.
 The unit of this value is `min`.
 
-### Battery_level (enum)
+### Battery level (enum)
 Battery level state.
 Value can be found in the published state on the `battery_level` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `low`, `middle`, `high`.
 
 ### Battery (numeric)
-Remaining battery in %, can take up to 24 hours before reported..
+Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.

@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | Photoelectric smoke detector |
 | Exposes | smoke, battery_state, linkquality |
-| Picture | ![TuYa TS0601_smoke_3](https://www.zigbee2mqtt.io/images/devices/TS0601_smoke_3.jpg) |
+| Picture | ![TuYa TS0601_smoke_3](https://www.zigbee2mqtt.io/images/devices/TS0601_smoke_3.png) |
 | White-label | KnockautX SMOAL024 |
 
 
@@ -39,7 +39,7 @@ Value can be found in the published state on the `smoke` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` smoke is ON, if `false` OFF.
 
-### Battery_state (enum)
+### Battery state (enum)
 State of the battery.
 Value can be found in the published state on the `battery_state` property.
 It's not possible to read (`/get`) or write (`/set`) this value.

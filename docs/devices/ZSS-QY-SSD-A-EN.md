@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | Smart smoke alarm |
 | Exposes | smoke, fault_alarm, battery_state, battery, silence, self_test, smoke_concentration, linkquality |
-| Picture | ![TuYa ZSS-QY-SSD-A-EN](https://www.zigbee2mqtt.io/images/devices/ZSS-QY-SSD-A-EN.jpg) |
+| Picture | ![TuYa ZSS-QY-SSD-A-EN](https://www.zigbee2mqtt.io/images/devices/ZSS-QY-SSD-A-EN.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -38,20 +38,20 @@ Value can be found in the published state on the `smoke` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` smoke is ON, if `false` OFF.
 
-### Fault_alarm (binary)
+### Fault alarm (binary)
 Indicates whether a fault was detected.
 Value can be found in the published state on the `fault_alarm` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `true` fault_alarm is ON, if `false` OFF.
+If value equals `true` fault alarm is ON, if `false` OFF.
 
-### Battery_state (enum)
+### Battery state (enum)
 State of the battery.
 Value can be found in the published state on the `battery_state` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `low`, `medium`, `high`.
 
 ### Battery (numeric)
-Remaining battery in %, can take up to 24 hours before reported..
+Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
@@ -64,14 +64,14 @@ It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"silence": NEW_VALUE}`.
 If value equals `true` silence is ON, if `false` OFF.
 
-### Self_test (binary)
+### Self test (binary)
 Indicates whether the device is being self-tested.
 Value can be found in the published state on the `self_test` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"self_test": NEW_VALUE}`.
-If value equals `true` self_test is ON, if `false` OFF.
+If value equals `true` self test is ON, if `false` OFF.
 
-### Smoke_concentration (numeric)
+### Smoke concentration (numeric)
 Parts per million of smoke detected.
 Value can be found in the published state on the `smoke_concentration` property.
 It's not possible to read (`/get`) or write (`/set`) this value.

@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Moes](/supported-devices/#v=Moes)  |
 | Description | Universal smart IR remote control |
 | Exposes | switch (state), learned_ir_code, ir_code_to_send, battery, voltage, linkquality |
-| Picture | ![Moes UFO-R11](https://www.zigbee2mqtt.io/images/devices/UFO-R11.jpg) |
+| Picture | ![Moes UFO-R11](https://www.zigbee2mqtt.io/images/devices/UFO-R11.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -62,19 +62,19 @@ The current state of this switch is in the published state under the `learn_ir_c
 To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"learn_ir_code": "ON"}`, `{"learn_ir_code": "OFF"}` or `{"learn_ir_code": "undefined"}`.
 It's not possible to read (`/get`) this value.
 
-### Learned_ir_code (text)
+### Learned ir code (text)
 The IR code learned by device.
 Value can be found in the published state on the `learned_ir_code` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 
-### Ir_code_to_send (text)
+### Ir code to send (text)
 The IR code to send by device.
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"ir_code_to_send": NEW_VALUE}`.
 
 ### Battery (numeric)
-Remaining battery in %, can take up to 24 hours before reported..
+Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.

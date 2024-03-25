@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | Fan switch |
 | Exposes | switch (state), power_on_behavior, countdown, fan_speed, linkquality |
-| Picture | ![TuYa TS0601_fan_switch](https://www.zigbee2mqtt.io/images/devices/TS0601_fan_switch.jpg) |
+| Picture | ![TuYa TS0601_fan_switch](https://www.zigbee2mqtt.io/images/devices/TS0601_fan_switch.png) |
 | White-label | Lerlink T2-Z67/T2-W67 |
 
 
@@ -38,8 +38,8 @@ The current state of this switch is in the published state under the `state` pro
 To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state": "ON"}`, `{"state": "OFF"}` or `{"state": "TOGGLE"}`.
 It's not possible to read (`/get`) this value.
 
-### Power_on_behavior (enum)
-Controls the behavior when the device is powered on after power loss.
+### Power-on behavior (enum)
+Controls the behavior when the device is powered on after power loss. If you get an `UNSUPPORTED_ATTRIBUTE` error, the device does not support it..
 Value can be found in the published state on the `power_on_behavior` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": NEW_VALUE}`.
@@ -53,7 +53,7 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `0` and the maximum value is `43200`.
 The unit of this value is `s`.
 
-### Fan_speed (numeric)
+### Fan speed (numeric)
 Speed off the fan.
 Value can be found in the published state on the `fan_speed` property.
 It's not possible to read (`/get`) this value.

@@ -17,14 +17,16 @@ pageClass: device-page
 |-----|-----|
 | Model | PA-44Z  |
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
-| Description | Smoke detector |
+| Description | Photoelectric smoke detector |
 | Exposes | smoke, battery, test, smoke_concentration, device_fault, linkquality |
-| Picture | ![TuYa PA-44Z](https://www.zigbee2mqtt.io/images/devices/PA-44Z.jpg) |
+| Picture | ![TuYa PA-44Z](https://www.zigbee2mqtt.io/images/devices/PA-44Z.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
 
-
+### Pairing
+Press test button for 10 seconds.
 <!-- Notes END: Do not edit below this line -->
 
 
@@ -39,7 +41,7 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` smoke is ON, if `false` OFF.
 
 ### Battery (numeric)
-Remaining battery in %, can take up to 24 hours before reported..
+Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
@@ -51,17 +53,17 @@ Value can be found in the published state on the `test` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` test is ON, if `false` OFF.
 
-### Smoke_concentration (numeric)
+### Smoke concentration (numeric)
 Parts per million of smoke detected.
 Value can be found in the published state on the `smoke_concentration` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `ppm`.
 
-### Device_fault (binary)
+### Device fault (binary)
 Indicates a fault with the device.
 Value can be found in the published state on the `device_fault` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `true` device_fault is ON, if `false` OFF.
+If value equals `true` device fault is ON, if `false` OFF.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

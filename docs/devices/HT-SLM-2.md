@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Heimgard Technologies](/supported-devices/#v=Heimgard%20Technologies)  |
 | Description | Doorlock with fingerprint |
 | Exposes | lock (state, lock_state), pin_code, battery, sound_volume, linkquality |
-| Picture | ![Heimgard Technologies HT-SLM-2](https://www.zigbee2mqtt.io/images/devices/HT-SLM-2.jpg) |
+| Picture | ![Heimgard Technologies HT-SLM-2](https://www.zigbee2mqtt.io/images/devices/HT-SLM-2.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -35,6 +35,8 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
+* `identify_timeout`: Sets duration of identification procedure in seconds (i.e., how long device would flash). Value ranges from 1 to 30 seconds (default 3). The value must be a number with a minimum value of `1` and with a with a maximum value of `30`
+
 * `expose_pin`: Expose pin of this lock in the published payload (default false). The value must be `true` or `false`
 
 
@@ -46,7 +48,7 @@ To control this lock publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` 
 To read the current state of this lock publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state": ""}`.
 This lock exposes a lock state which can be found in the published state under the `lock_state` property. It's not possible to read (`/get`) or write (`/set`) this value. The possible values are: `not_fully_locked`, `locked`, `unlocked`.
 
-### Pin_code (composite)
+### Pin code (composite)
 Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"pin_code": {"user": VALUE, "user_type": VALUE, "user_enabled": VALUE, "pin_code": VALUE}}`
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"pin_code": ""}`.
 - `user` (numeric): User ID to set or clear the pincode for 
@@ -55,13 +57,13 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 - `pin_code` (numeric): Pincode to set, set pincode to null to clear 
 
 ### Battery (numeric)
-Remaining battery in %, can take up to 24 hours before reported..
+Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
 
-### Sound_volume (enum)
+### Sound volume (enum)
 Sound volume of the lock.
 Value can be found in the published state on the `sound_volume` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"sound_volume": ""}`.

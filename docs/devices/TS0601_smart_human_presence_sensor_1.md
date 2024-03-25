@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | Smart Human presence sensor |
 | Exposes | illuminance_lux, presence, target_distance, radar_sensitivity, minimum_range, maximum_range, detection_delay, fading_time, self_test, linkquality |
-| Picture | ![TuYa TS0601_smart_human_presence_sensor_1](https://www.zigbee2mqtt.io/images/devices/TS0601_smart_human_presence_sensor_1.jpg) |
+| Picture | ![TuYa TS0601_smart_human_presence_sensor_1](https://www.zigbee2mqtt.io/images/devices/TS0601_smart_human_presence_sensor_1.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -29,10 +29,15 @@ pageClass: device-page
 
 
 
+## Options
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `illuminance_lux_calibration`: Calibrates the illuminance_lux value (percentual offset), takes into effect on next report of device. The value must be a number.
+
 
 ## Exposes
 
-### Illuminance_lux (numeric)
+### Illuminance (lux) (numeric)
 Measured illuminance in lux.
 Value can be found in the published state on the `illuminance_lux` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
@@ -44,20 +49,20 @@ Value can be found in the published state on the `presence` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` presence is ON, if `false` OFF.
 
-### Target_distance (numeric)
+### Target distance (numeric)
 Distance to target.
 Value can be found in the published state on the `target_distance` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `m`.
 
-### Radar_sensitivity (numeric)
+### Radar sensitivity (numeric)
 sensitivity of the radar.
 Value can be found in the published state on the `radar_sensitivity` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"radar_sensitivity": NEW_VALUE}`.
 The minimal value is `0` and the maximum value is `9`.
 
-### Minimum_range (numeric)
+### Minimum range (numeric)
 Minimum range.
 Value can be found in the published state on the `minimum_range` property.
 It's not possible to read (`/get`) this value.
@@ -65,7 +70,7 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `0` and the maximum value is `9.5`.
 The unit of this value is `m`.
 
-### Maximum_range (numeric)
+### Maximum range (numeric)
 Maximum range.
 Value can be found in the published state on the `maximum_range` property.
 It's not possible to read (`/get`) this value.
@@ -73,7 +78,7 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `0` and the maximum value is `9.5`.
 The unit of this value is `m`.
 
-### Detection_delay (numeric)
+### Detection delay (numeric)
 Detection delay.
 Value can be found in the published state on the `detection_delay` property.
 It's not possible to read (`/get`) this value.
@@ -81,7 +86,7 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `0` and the maximum value is `10`.
 The unit of this value is `s`.
 
-### Fading_time (numeric)
+### Fading time (numeric)
 Fading time.
 Value can be found in the published state on the `fading_time` property.
 It's not possible to read (`/get`) this value.
@@ -89,8 +94,8 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `0` and the maximum value is `1500`.
 The unit of this value is `s`.
 
-### Self_test (enum)
-Self_test, possible resuts: checking, check_success, check_failure, others, comm_fault, radar_fault..
+### Self test (enum)
+Self_test, possible results: checking, check_success, check_failure, others, comm_fault, radar_fault..
 Value can be found in the published state on the `self_test` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `checking`, `check_success`, `check_failure`, `others`, `comm_fault`, `radar_fault`.

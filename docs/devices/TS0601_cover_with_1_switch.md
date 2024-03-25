@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | Curtain/blind switch with 1 Gang switch |
 | Exposes | cover (state, position), switch (state), calibration, backlight_mode, motor_steering, child_lock, linkquality |
-| Picture | ![TuYa TS0601_cover_with_1_switch](https://www.zigbee2mqtt.io/images/devices/TS0601_cover_with_1_switch.jpg) |
+| Picture | ![TuYa TS0601_cover_with_1_switch](https://www.zigbee2mqtt.io/images/devices/TS0601_cover_with_1_switch.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -57,26 +57,26 @@ It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"calibration": NEW_VALUE}`.
 The possible values are: `START`, `END`.
 
-### Backlight_mode (binary)
+### Backlight mode (binary)
 Backlight.
 Value can be found in the published state on the `backlight_mode` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"backlight_mode": NEW_VALUE}`.
-If value equals `ON` backlight_mode is ON, if `OFF` OFF.
+If value equals `ON` backlight mode is ON, if `OFF` OFF.
 
-### Motor_steering (enum)
+### Motor steering (enum)
 Motor Steering.
 Value can be found in the published state on the `motor_steering` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"motor_steering": NEW_VALUE}`.
 The possible values are: `FORWARD`, `BACKWARD`.
 
-### Child_lock (binary)
+### Child lock (binary)
 Child Lock.
 Value can be found in the published state on the `child_lock` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"child_lock": NEW_VALUE}`.
-If value equals `ON` child_lock is ON, if `OFF` OFF.
+If value equals `ON` child lock is ON, if `OFF` OFF.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

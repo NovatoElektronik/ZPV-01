@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | Temperature & humidity sensor |
 | Exposes | temperature, humidity, battery, battery_low, battery_level, linkquality |
-| Picture | ![TuYa TS0601_temperature_humidity_sensor_1](https://www.zigbee2mqtt.io/images/devices/TS0601_temperature_humidity_sensor_1.jpg) |
+| Picture | ![TuYa TS0601_temperature_humidity_sensor_1](https://www.zigbee2mqtt.io/images/devices/TS0601_temperature_humidity_sensor_1.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -28,9 +28,9 @@ pageClass: device-page
 
 ### Pairing
 Press and hold the pairing button on top for 5 seconds. When the signal icon flashes fast, release the button. It will search 20 seconds for network. 
-The signal icon will stay once connected to indicate successful connection
+The signal icon will stay once connected to indicate a successful connection.
 
-Pressing more than 10 secons cancels the pairing.
+Pressing more than 10 seconds cancels the pairing.
 <!-- Notes END: Do not edit below this line -->
 
 
@@ -38,13 +38,13 @@ Pressing more than 10 secons cancels the pairing.
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
-* `temperature_precision`: Number of digits after decimal point for temperature, takes into effect on next report of device. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
-
 * `temperature_calibration`: Calibrates the temperature value (absolute offset), takes into effect on next report of device. The value must be a number.
 
-* `humidity_precision`: Number of digits after decimal point for humidity, takes into effect on next report of device. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+* `temperature_precision`: Number of digits after decimal point for temperature, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
 
 * `humidity_calibration`: Calibrates the humidity value (absolute offset), takes into effect on next report of device. The value must be a number.
+
+* `humidity_precision`: Number of digits after decimal point for humidity, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
 
 
 ## Exposes
@@ -62,19 +62,19 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `%`.
 
 ### Battery (numeric)
-Remaining battery in %, can take up to 24 hours before reported..
+Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
 
-### Battery_low (binary)
+### Battery low (binary)
 Indicates if the battery of this device is almost empty.
 Value can be found in the published state on the `battery_low` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `true` battery_low is ON, if `false` OFF.
+If value equals `true` battery low is ON, if `false` OFF.
 
-### Battery_level (enum)
+### Battery level (enum)
 Battery level state.
 Value can be found in the published state on the `battery_level` property.
 It's not possible to read (`/get`) or write (`/set`) this value.

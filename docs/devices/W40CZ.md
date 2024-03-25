@@ -17,9 +17,9 @@ pageClass: device-page
 |-----|-----|
 | Model | W40CZ  |
 | Vendor  | [ORVIBO](/supported-devices/#v=ORVIBO)  |
-| Description | Smart curtain motor  |
+| Description | Smart curtain motor |
 | Exposes | cover (state, position), linkquality |
-| Picture | ![ORVIBO W40CZ](https://www.zigbee2mqtt.io/images/devices/W40CZ.jpg) |
+| Picture | ![ORVIBO W40CZ](https://www.zigbee2mqtt.io/images/devices/W40CZ.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
